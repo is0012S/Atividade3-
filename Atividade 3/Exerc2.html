@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade3</title>
+</head>
+<body>
+    <h1>Calculo de Imposto de Renda</h1>
+    <label>Registro: </label>
+    <input id="registro" type="text">
+    <br>
+    <label>Nome: </label>
+    <input id="nome" type="text">
+    <br>
+    <label>Salário: </label>
+    <input id="sal" type="number">
+    <br>
+    <br>
+    <button onclick="calcularIR()">Calculo IR</button>
+    <br>
+    <br>
+    Imposto de Renda :<span></span>
+
+    <script>
+         var salario = document.querySelector('#sal')
+         var resultado = document.querySelector('span')
+
+         function calcularIR(){
+            event.preventDefault()
+            if(parseInt(sal.value)< 1434){
+                resultado.innerHTML="Baseado em seu salário você está isento"
+            }
+            else if(parseInt(sal.value)<2150){
+                resultado.innerHTML= " Baseado em seu salário o valor do seu imposto de renda será de :" + parseInt(sal.value)*0.075 
+            }
+            else if(parseInt(sal.value)<2866){
+                resultado.innerHTML= " Baseado em seu salário o valor do seu imposto de renda será de :" + parseInt(sal.value)*0.15 
+            }
+            else if(parseInt(sal.value)<3582){
+                resultado.innerHTML= " Baseado em seu salário o valor do seu imposto de renda será de :" + parseInt(sal.value)*0.225 
+            }
+            else if(parseInt(sal.value)>=3582){
+                resultado.innerHTML= " Baseado em seu salário o valor do seu imposto de renda será de :" + parseInt(sal.value)*0.275 
+            }
+
+         }
+
+        
+    </script>
+    
+</body>
+</html>

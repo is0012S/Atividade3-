@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade3</title>
+</head>
+<body>
+    <h1>Calcule a área do retangulo</h1>
+    <br>
+    <label>Base:</label>
+    <input id="base" type="number">
+    <br>
+    <label>Altura:</label>
+    <input id="altura" type="number">
+    <br>
+    <br>
+    <button onclick="calculo()">Calculo da área</button>
+    <br>
+    <br>
+    Resultado: <span></span>
+
+    <script>
+        var base = document.querySelector('#base')
+        var altura = document.querySelector('#altura')
+        var resultado = document.querySelector('span')
+
+        function calculo(){
+            resultado.innerHTML = parseInt(base.value) * parseInt(altura.value)            
+    }
+    </script>
+
+
+</body>
+</html>

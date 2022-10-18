@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade3</title>
+</head>
+<body>
+    <h1>Condição de Pagamento</h1>
+    <label>Valor da compra: </label>
+    <input id="valor" type="number">
+    <br>
+    <br>
+    <button onclick="vista()">1 -  À vista</button>
+    <button onclick="cartao()">2 -  Debito</button>
+    <button onclick="parcelado()">3 -  Parcelado</button>
+    <br>
+    <br>
+    Valor total: <span id="valor1"></span> 
+    <br>
+    Valor a ser pago: <span id="resultado"></span>
+
+   <script>
+    var valor1 = document.querySelector('#valor1')
+    var valor = document.querySelector('#valor')
+    var resultado = document.querySelector('#resultado')
+
+    function vista(){
+        resultado.innerHTML = parseInt(valor.value) *0.90  
+        valor1.innerHTML = parseInt(valor.value)           
+    }
+    function cartao(){
+        resultado.innerHTML = parseInt(valor.value) *0.95
+        valor1.innerHTML = parseInt(valor.value)    
+    }
+    function parcelado(){
+        resultado.innerHTML = parseInt(valor.value) *1.10 
+        valor1.innerHTML = parseInt(valor.value)   
+    }
+   </script>
+   
+    
+</body>
+</html>
